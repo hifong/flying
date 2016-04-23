@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by wanghaifeng (aspire) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="ST_config">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:element name="config">
+		<xs:annotation>
+			<xs:documentation>属性name作为配置的key，节点text作为配置的值</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="ST_config">
+					<xs:attribute name="name" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string"/>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="security">
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="name" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>安全控制名称，描述性的</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="roles" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>允许的角色，多个使用英文逗号分开</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="users" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>允许的用户，多个使用英文逗号分开</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="perms" default="text/html; charset=UTF-8" nillable="false" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>允许的权限，多个使用英文逗号分开</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="ignores" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>忽略控制部分URI pattern（正则表达式），多个使用英文逗号分开</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="configs" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>页面的其他配置项</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence minOccurs="0" maxOccurs="unbounded">
+							<xs:element ref="config"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+			<xs:attribute name="id" type="xs:ID" use="required"/>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="securities">
+		<xs:complexType>
+			<xs:sequence minOccurs="0" maxOccurs="unbounded">
+				<xs:element ref="security">
+					<xs:annotation>
+						<xs:documentation>安全控制节点</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

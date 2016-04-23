@@ -1,0 +1,840 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mimes>
+	<mime-mapping>
+		<extension>abs</extension>
+		<mimetype>audio/x-mpeg</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>ai</extension>
+		<mimetype>application/postscript</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>aif</extension>
+		<mimetype>audio/x-aiff</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>aifc</extension>
+		<mimetype>audio/x-aiff</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>aiff</extension>
+		<mimetype>audio/x-aiff</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>aim</extension>
+		<mimetype>application/x-aim</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>art</extension>
+		<mimetype>image/x-jg</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>asf</extension>
+		<mimetype>video/x-ms-asf</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>asx</extension>
+		<mimetype>video/x-ms-asf</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>au</extension>
+		<mimetype>audio/basic</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>avi</extension>
+		<mimetype>video/x-msvideo</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>avx</extension>
+		<mimetype>video/x-rad-screenplay</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>bcpio</extension>
+		<mimetype>application/x-bcpio</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>bin</extension>
+		<mimetype>application/octet-stream</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>bmp</extension>
+		<mimetype>image/bmp</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>body</extension>
+		<mimetype>text/html</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>cdf</extension>
+		<mimetype>application/x-cdf</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>cer</extension>
+		<mimetype>application/x-x509-ca-cert</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>class</extension>
+		<mimetype>application/java</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>cpio</extension>
+		<mimetype>application/x-cpio</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>csh</extension>
+		<mimetype>application/x-csh</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>css</extension>
+		<mimetype>text/css</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>dib</extension>
+		<mimetype>image/bmp</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>doc</extension>
+		<mimetype>application/msword</mimetype>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>dtd</extension>
+		<mimetype>application/xml-dtd</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>dv</extension>
+		<mimetype>video/x-dv</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>dvi</extension>
+		<mimetype>application/x-dvi</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>eps</extension>
+		<mimetype>application/postscript</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>etx</extension>
+		<mimetype>text/x-setext</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>exe</extension>
+		<mimetype>application/octet-stream</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>gif</extension>
+		<mimetype>image/gif</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>gtar</extension>
+		<mimetype>application/x-gtar</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>gz</extension>
+		<mimetype>application/x-gzip</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>hdf</extension>
+		<mimetype>application/x-hdf</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>hqx</extension>
+		<mimetype>application/mac-binhex40</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>htc</extension>
+		<mimetype>text/x-component</mimetype>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>htm</extension>
+		<mimetype>text/html</mimetype>
+	</mime-mapping>
+
+	<mime-mapping>
+		<extension>html</extension>
+		<mimetype>text/html</mimetype>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>hqx</extension>
+		<mimetype>application/mac-binhex40</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>ief</extension>
+		<mimetype>image/ief</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>jad</extension>
+		<mimetype>text/vnd.sun.j2me.app-descriptor</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>jar</extension>
+		<mimetype>application/java-archive</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>java</extension>
+		<mimetype>text/plain</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>jnlp</extension>
+		<mimetype>application/x-java-jnlp-file</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>jpe</extension>
+		<mimetype>image/jpeg</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>jpeg</extension>
+		<mimetype>image/jpeg</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>jpg</extension>
+		<mimetype>image/jpeg</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>js</extension>
+		<mimetype>text/javascript</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>jsf</extension>
+		<mimetype>text/plain</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>jspf</extension>
+		<mimetype>text/plain</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>kar</extension>
+		<mimetype>audio/x-midi</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>latex</extension>
+		<mimetype>application/x-latex</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>m3u</extension>
+		<mimetype>audio/x-mpegurl</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mac</extension>
+		<mimetype>image/x-macpaint</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>man</extension>
+		<mimetype>application/x-troff-man</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mathml</extension>
+		<mimetype>application/mathml+xml</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>me</extension>
+		<mimetype>application/x-troff-me</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mid</extension>
+		<mimetype>audio/x-midi</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>midi</extension>
+		<mimetype>audio/x-midi</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mif</extension>
+		<mimetype>application/x-mif</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mov</extension>
+		<mimetype>video/quicktime</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>movie</extension>
+		<mimetype>video/x-sgi-movie</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mp1</extension>
+		<mimetype>audio/x-mpeg</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mp2</extension>
+		<mimetype>audio/x-mpeg</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mp3</extension>
+		<mimetype>audio/x-mpeg</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mp4</extension>
+		<mimetype>video/mp4</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mpa</extension>
+		<mimetype>audio/x-mpeg</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mpe</extension>
+		<mimetype>video/mpeg</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mpeg</extension>
+		<mimetype>video/mpeg</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mpega</extension>
+		<mimetype>audio/x-mpeg</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mpg</extension>
+		<mimetype>video/mpeg</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>mpv2</extension>
+		<mimetype>video/mpeg2</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>ms</extension>
+		<mimetype>application/x-wais-source</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>nc</extension>
+		<mimetype>application/x-netcdf</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>oda</extension>
+		<mimetype>application/oda</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- OpenDocument Database -->
+		<extension>odb</extension>
+		<mimetype>application/vnd.oasis.opendocument.database</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- OpenDocument Chart -->
+		<extension>odc</extension>
+		<mimetype>application/vnd.oasis.opendocument.chart</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- OpenDocument Formula -->
+		<extension>odf</extension>
+		<mimetype>application/vnd.oasis.opendocument.formula</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- OpenDocument Drawing -->
+		<extension>odg</extension>
+		<mimetype>application/vnd.oasis.opendocument.graphics</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- OpenDocument Image -->
+		<extension>odi</extension>
+		<mimetype>application/vnd.oasis.opendocument.image</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- OpenDocument Master Document -->
+		<extension>odm</extension>
+		<mimetype>application/vnd.oasis.opendocument.text-master</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- OpenDocument Presentation -->
+		<extension>odp</extension>
+		<mimetype>application/vnd.oasis.opendocument.presentation</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- OpenDocument Spreadsheet -->
+		<extension>ods</extension>
+		<mimetype>application/vnd.oasis.opendocument.spreadsheet</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- OpenDocument Text -->
+		<extension>odt</extension>
+		<mimetype>application/vnd.oasis.opendocument.text</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>ogg</extension>
+		<mimetype>application/ogg</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- OpenDocument Drawing Template -->
+		<extension>otg </extension>
+		<mimetype>application/vnd.oasis.opendocument.graphics-template
+		</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- HTML Document Template -->
+		<extension>oth</extension>
+		<mimetype>application/vnd.oasis.opendocument.text-web</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- OpenDocument Presentation Template -->
+		<extension>otp</extension>
+		<mimetype>application/vnd.oasis.opendocument.presentation-template
+		</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- OpenDocument Spreadsheet Template -->
+		<extension>ots</extension>
+		<mimetype>application/vnd.oasis.opendocument.spreadsheet-template
+		</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- OpenDocument Text Template -->
+		<extension>ott</extension>
+		<mimetype>application/vnd.oasis.opendocument.text-template</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>pbm</extension>
+		<mimetype>image/x-portable-bitmap</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>pct</extension>
+		<mimetype>image/pict</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>pdf</extension>
+		<mimetype>application/pdf</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>pgm</extension>
+		<mimetype>image/x-portable-graymap</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>pic</extension>
+		<mimetype>image/pict</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>pict</extension>
+		<mimetype>image/pict</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>pls</extension>
+		<mimetype>audio/x-scpls</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>png</extension>
+		<mimetype>image/png</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>pnm</extension>
+		<mimetype>image/x-portable-anymap</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>pnt</extension>
+		<mimetype>image/x-macpaint</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>ppm</extension>
+		<mimetype>image/x-portable-pixmap</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>ppt</extension>
+		<mimetype>application/powerpoint</mimetype>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>ps</extension>
+		<mimetype>application/postscript</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>psd</extension>
+		<mimetype>image/x-photoshop</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>qt</extension>
+		<mimetype>video/quicktime</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>qti</extension>
+		<mimetype>image/x-quicktime</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>qtif</extension>
+		<mimetype>image/x-quicktime</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>ras</extension>
+		<mimetype>image/x-cmu-raster</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>rdf</extension>
+		<mimetype>application/rdf+xml</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>rgb</extension>
+		<mimetype>image/x-rgb</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>rm</extension>
+		<mimetype>application/vnd.rn-realmedia</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>roff</extension>
+		<mimetype>application/x-troff</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>rtf</extension>
+		<mimetype>application/rtf</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>rtx</extension>
+		<mimetype>text/richtext</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>sh</extension>
+		<mimetype>application/x-sh</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>shar</extension>
+		<mimetype>application/x-shar</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>smf</extension>
+		<mimetype>audio/x-midi</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>sit</extension>
+		<mimetype>application/x-stuffit</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>snd</extension>
+		<mimetype>audio/basic</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>src</extension>
+		<mimetype>application/x-wais-source</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>sv4cpio</extension>
+		<mimetype>application/x-sv4cpio</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>sv4crc</extension>
+		<mimetype>application/x-sv4crc</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>swf</extension>
+		<mimetype>application/x-shockwave-flash</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>t</extension>
+		<mimetype>application/x-troff</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>tar</extension>
+		<mimetype>application/x-tar</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>tcl</extension>
+		<mimetype>application/x-tcl</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>tex</extension>
+		<mimetype>application/x-tex</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>texi</extension>
+		<mimetype>application/x-texinfo</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>texinfo</extension>
+		<mimetype>application/x-texinfo</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>tif</extension>
+		<mimetype>image/tiff</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>tiff</extension>
+		<mimetype>image/tiff</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>tr</extension>
+		<mimetype>application/x-troff</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>tsv</extension>
+		<mimetype>text/tab-separated-values</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>txt</extension>
+		<mimetype>text/plain</mimetype>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>ulw</extension>
+		<mimetype>audio/basic</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>ustar</extension>
+		<mimetype>application/x-ustar</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>vxml</extension>
+		<mimetype>application/voicexml+xml</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xbm</extension>
+		<mimetype>image/x-xbitmap</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xht</extension>
+		<mimetype>application/xhtml+xml</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xhtml</extension>
+		<mimetype>application/xhtml+xml</mimetype>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xml</extension>
+		<mimetype>application/xml</mimetype>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xpm</extension>
+		<mimetype>image/x-xpixmap</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xsl</extension>
+		<mimetype>application/xml</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xslt</extension>
+		<mimetype>application/xslt+xml</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xul</extension>
+		<mimetype>application/vnd.mozilla.xul+xml</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xwd</extension>
+		<mimetype>image/x-xwindowdump</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>wav</extension>
+		<mimetype>audio/x-wav</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>svg</extension>
+		<mimetype>image/svg+xml</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>svgz</extension>
+		<mimetype>image/svg+xml</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>vsd</extension>
+		<mimetype>application/x-visio</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- Wireless Bitmap -->
+		<extension>wbmp</extension>
+		<mimetype>image/vnd.wap.wbmp</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- WML Source -->
+		<extension>wml</extension>
+		<mimetype>text/vnd.wap.wml</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- Compiled WML -->
+		<extension>wmlc</extension>
+		<mimetype>application/vnd.wap.wmlc</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- WML Script Source -->
+		<extension>wmls</extension>
+		<mimetype>text/vnd.wap.wmlscript</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<!-- Compiled WML Script -->
+		<extension>wmlscriptc</extension>
+		<mimetype>application/vnd.wap.wmlscriptc</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>wmv</extension>
+		<mimetype>video/x-ms-wmv</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>wrl</extension>
+		<mimetype>x-world/x-vrml</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>wspolicy</extension>
+		<mimetype>application/wspolicy+xml</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>Z</extension>
+		<mimetype>application/x-compress</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>z</extension>
+		<mimetype>application/x-compress</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>zip</extension>
+		<mimetype>application/zip</mimetype>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>xls</extension>
+		<mimetype>application/vnd.ms-excel</mimetype>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>doc</extension>
+		<mimetype>application/vnd.ms-word</mimetype>
+	</mime-mapping>
+	<mime-mapping>
+		<extension>ppt</extension>
+		<mimetype>application/vnd.ms-powerpoint</mimetype>
+
+	</mime-mapping>
+	<mime-mapping>
+		<extension>other</extension>
+		<mimetype>not-supported</mimetype>
+
+	</mime-mapping>
+</mimes>

@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module>
+	<id>template</id>
+	<version>1</version>
+	<inner-version>1.0.0.0</inner-version>
+	<name>Module Template</name>
+	<desc>Module Template</desc>
+	<static-path>statics</static-path>
+	<template-type>smarty</template-type>
+	<template-path>template</template-path>
+	<filters>
+		<filter service="com.flying.framework.request.impl.AccessLoggerFilter" />
+	</filters>
+	<imports>
+		<import type="service" path="default-services.xml"/>
+	</imports>
+	<events>
+		<event type="load" service="ModuleTestEvent:onLoad" />
+		<event type="unload" service="ModuleTestEvent:onUnload" />
+	</events> 
+	<beans>
+		<bean name="com.flying.framework.service.SpringBeanFactory">com.flying.common.util.BeanFactory</bean>
+		<bean name="com.flying.framework.cache.CacheProvider">com.flying.framework.cache.impl.MemoryCacheProvider</bean>
+	</beans>
+	<requests>
+		<request type="page" service="com.flying.framework.request.impl.PageRequestService"/>
+		<request type="action" service="com.flying.framework.request.impl.JsonRequestService"/>
+		<request type="shtml" service="com.flying.framework.request.impl.ShtmlRequestService"/>
+		
+		<request type="css" service="com.flying.framework.request.impl.ResourceRequestService"/>
+		<request type="gif" service="com.flying.framework.request.impl.ResourceRequestService"/>
+		<request type="jpg" service="com.flying.framework.request.impl.ResourceRequestService"/>
+		<request type="png" service="com.flying.framework.request.impl.ResourceRequestService"/>
+		<request type="jpeg" service="com.flying.framework.request.impl.ResourceRequestService"/>
+		<request type="js" service="com.flying.framework.request.impl.ResourceRequestService"/>
+		<request type="html" service="com.flying.framework.request.impl.ResourceRequestService"/>
+		<request type="htm" service="com.flying.framework.request.impl.ResourceRequestService"/>
+		<request type="swf" service="com.flying.framework.request.impl.ResourceRequestService"/>
+		<request type="avi" service="com.flying.framework.request.impl.ResourceRequestService"/>
+	</requests>
+	<converters>
+		<converter type="javax.servlet.http.HttpServletRequest" service="com.flying.framework.data.impl.HttpRequest2DataConverter"/>
+	</converters>
+	<annotations>
+		<annotation type="DEFAULT" service="com.flying.framework.service.impl.DefaultServiceInvokeHandler"/>
+		<annotation type="com.flying.framework.annotation.MethodLogger" service="com.flying.framework.service.impl.MethodLoggerHandler"/>
+		<annotation type="com.flying.framework.annotation.UseCache" service="com.flying.framework.service.impl.UseCacheHandler"/>
+		<annotation type="com.flying.framework.annotation.Level2Cache" service="com.flying.framework.service.impl.Level2CacheHandler"/>
+		<annotation type="com.flying.framework.annotation.RemoveCache" service="com.flying.framework.service.impl.RemoveCacheHandler"/>
+		<annotation type="com.flying.framework.annotation.CommonQuery" service="com.flying.framework.service.impl.CommonQueryHandler"/>
+		<annotation type="com.flying.framework.annotation.CommonUpdate" service="com.flying.framework.service.impl.CommonUpdateHandler"/>
+		<annotation type="com.flying.framework.annotation.DaoCreate" service="com.flying.framework.service.impl.DaoCreateHandler"/>
+		<annotation type="com.flying.framework.annotation.DaoUpdate" service="com.flying.framework.service.impl.DaoUpdateHandler"/>
+		<annotation type="com.flying.framework.annotation.DaoQuery" service="com.flying.framework.service.impl.DaoQueryHandler"/>
+		<annotation type="com.flying.framework.annotation.DaoRemove" service="com.flying.framework.service.impl.DaoRemoveHandler"/>
+		<annotation type="com.flying.framework.annotation.Transaction" service="com.flying.framework.service.impl.TransactionHandler"/>
+	</annotations>
+	<configs>
+		<config name="contentType">text/html; charset=UTF-8</config>
+		<config name="encoding">UTF-8</config>
+		<config name="jqueryui.dialog">jqueryui/dialog.tpl</config>
+		<config name="jqueryui.datagrid">jqueryui/datagrid.tpl</config>
+		<config name="metadata-files"></config>
+	</configs>
+</module>

@@ -1,0 +1,75 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<services>
+	<service id="com.flying.framework.request.impl.PageRequestService" type="class" target="com.flying.framework.request.impl.PageRequestService">
+		<desc></desc>
+		<configs>
+			<config name="content-type">text/html; charset=UTF-8</config>
+			<config name="encoding">UTF-8</config>
+		</configs>
+	</service>
+	<service id="com.flying.framework.request.impl.ShtmlRequestService" type="class" target="com.flying.framework.request.impl.ShtmlRequestService">
+		<desc></desc>
+		<configs>
+			<config name="content-type">text/html; charset=UTF-8</config>
+			<config name="encoding">UTF-8</config>
+		</configs>
+	</service>
+	<service id="com.flying.framework.request.impl.JsonRequestService" type="class" target="com.flying.framework.request.impl.JsonRequestService" />
+	<service id="com.flying.framework.request.impl.ResourceRequestService" type="class" target="com.flying.framework.request.impl.ResourceRequestService" />
+	<service id="com.flying.framework.data.impl.HttpRequest2DataConverter" type="class" target="com.flying.framework.data.impl.HttpRequest2DataConverter" />
+	<service id="com.flying.framework.request.impl.AccessLoggerFilter" type="class" target="com.flying.framework.request.impl.AccessLoggerFilter" />
+	<service id="com.flying.framework.service.impl.MethodLoggerHandler" type="class" target="com.flying.framework.service.impl.MethodLoggerHandler" />
+	<service id="com.flying.framework.service.impl.MethodAuthenticationHandler" type="class" target="com.flying.framework.service.impl.MethodAuthenticationHandler" />
+	<service id="com.flying.framework.service.impl.DefaultServiceInvokeHandler" type="class" target="com.flying.framework.service.impl.DefaultServiceInvokeHandler" />
+	<service id="com.flying.framework.service.impl.UseCacheHandler" type="class" target="com.flying.framework.service.impl.UseCacheHandler" />
+	<service id="com.flying.framework.service.impl.Level2CacheHandler" type="class" target="com.flying.framework.service.impl.Level2CacheHandler" />
+	<service id="com.flying.framework.service.impl.RemoveCacheHandler" type="class" target="com.flying.framework.service.impl.RemoveCacheHandler" />
+	<service id="com.flying.framework.service.impl.CommonQueryHandler" type="class" target="com.flying.framework.service.impl.CommonQueryHandler" />
+	<service id="com.flying.framework.service.impl.CommonUpdateHandler" type="class" target="com.flying.framework.service.impl.CommonUpdateHandler" />
+	<service id="com.flying.framework.service.impl.DaoCreateHandler" type="class" target="com.flying.framework.service.impl.DaoCreateHandler" />
+	<service id="com.flying.framework.service.impl.DaoUpdateHandler" type="class" target="com.flying.framework.service.impl.DaoUpdateHandler" />
+	<service id="com.flying.framework.service.impl.DaoQueryHandler" type="class" target="com.flying.framework.service.impl.DaoQueryHandler" />
+	<service id="com.flying.framework.service.impl.DaoRemoveHandler" type="class" target="com.flying.framework.service.impl.DaoRemoveHandler" />
+	<service id="com.flying.framework.service.impl.TransactionHandler" type="class" target="com.flying.framework.service.impl.TransactionHandler" />
+	<service id="pasURIAuthenticationFilter" type="class" target="com.flying.framework.request.impl.URIAuthenticationFilter">
+		<desc>pasURIAuthenticationFilter</desc>
+		<configs>
+			<config name="filterPattern">.+(\\.page|\\.shtml|\\.widget)</config>
+			<config name="ignorePattern">login</config>
+			<config name="login">/pas/login.shtml</config>
+			<config name="authModuleId">pas</config>
+			<config name="authService">AuthService:auth</config>
+		</configs>
+	</service>
+	<service id="ModuleTestEvent" type="class" target="com.flying.framework.service.impl.ModuleEvent">
+		<desc></desc>
+		<configs>
+			<config name="onLoad">Module onLoad success!</config>
+			<config name="onUnload">Module onUnload success!</config>
+		</configs>
+	</service>
+	<service id="LogHandleService" type="class" target="com.flying.framework.XService">
+		<desc></desc>
+		<configs>
+			<config name="games.price">100</config>
+		</configs>
+		<events>
+			<event id="prehandle" sender="receive">
+				<handler serviceId="LogHandleService:prehandle">
+					<condition name="CONTINUE">true</condition>
+				</handler>
+			</event>
+			<event id="send2Marketing" sender="prehandle">
+				<handler serviceId="LogHandleService:send2Marketing">
+					<condition name="status">200</condition>
+					<condition name="CONTINUE">true</condition>
+				</handler>
+			</event>
+			<event id="sendFail" sender="send2Marketing">
+				<handler serviceId="LogHandleService:sendFail">
+					<condition name="CONTINUE">true</condition>
+				</handler>
+			</event>
+		</events>
+	</service>
+</services>

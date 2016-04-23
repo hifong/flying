@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<application xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="xsd/application.xsd">
+	<id>Application</id>
+	<event-producer>0</event-producer>
+	<product-mode>false</product-mode>
+	<group-configs>
+		<configs group="remoting">
+			<config name="invoker">hessian</config>
+			<config name="hessian">com.flying.framework.remote.hessian.HessianRemoteServiceInvoker</config>
+			<config name="thrift">com.flying.framework.remote.thrift.ThriftRemoteServiceInvoker</config>
+		</configs>
+		<configs group="hessian">
+			<config name="connectTimeout">10000</config>
+			<config name="readTimeout">10000</config>
+			<config name="debug">false</config>
+			<config name="url">http://localhost:8080/remoting</config>
+			<config name="hessian2Reply">true</config>
+			<config name="hessian2Request">false</config>
+			<config name="chunkedPost">true</config>
+			<config name="maxConnection">2000</config>
+			<config name="maxPerHostConnection">2000</config>
+		</configs>
+		<configs group="thrift1">
+			<config name="port">10000</config>
+		</configs>
+		<configs group="http">
+			<config name="http.timeout">10000</config>
+			<config name="http.maxParameters">10000</config>
+			<config name="http.maxConnection">10000</config>
+			<config name="http.maxPerHostConnection">10000</config>
+		</configs>
+		<configs group="mongodb">
+			<config name="db.default">project</config>
+			<config name="db.names">project</config>
+			<config name="db.maxSize">600</config>
+			<config name="db.waitTimeout">127.0.0.1</config>
+			<config name="project.port">20000</config>
+			<config name="project.db">project</config>
+		</configs>
+	</group-configs>
+	<modules>
+	<!-- 
+		<module id="mc" version="1" locate="local">
+			C:\flying\mc\WebRoot
+		</module>
+		<module id="uc" version="1" locate="local">
+			C:\flying\uc\WebRoot
+		</module> 
+		<module id="pps" version="1" locate="local">
+			C:\flying\pps\WebRoot
+		</module>
+		-->
+		<module id="cms" version="1" locate="local">
+			C:\flying\cms\WebRoot
+		</module>
+		<module id="pas" version="1" locate="local">
+			C:\flying\pas\WebRoot
+		</module>
+		<module id="portal" version="1" locate="local">
+			C:\flying\portal\WebRoot
+		</module>
+		<module id="project" version="1" locate="local">
+			C:\flying\project\WebRoot
+		</module>
+		<module id="weekly" version="1" locate="local">
+			C:\flying\weekly\WebRoot
+		</module>
+		<module id="site" version="1" locate="local">
+			C:\flying\site\WebRoot
+		</module>
+		<module id="resume" version="1" locate="local">
+			C:\flying\resume\WebRoot
+		</module>
+	</modules>
+</application>

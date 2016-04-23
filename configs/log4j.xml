@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/" threshold="debug">
+	<appender name="debug" class="com.flying.common.log.appender.FCTimeSizeRollingFileAppender">
+		<errorHandler class="com.flying.common.log.handler.JLogErrorHandler"></errorHandler>
+		<param name="File" value="/debug/debug.log"/>
+		<param name="MaxBackupIndex" value="50"/>
+		<param name="Encoding" value="GB2312"/>
+		<param name="MaxFileSize" value="10MB"/>
+		<param name="DatePattern" value="'.'yyyyMMddHH"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value=" [%d{yyyy-MM-dd HH:mm:ss}]%-5p%x - %m%n"/>
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="debug"/>
+			<param name="LevelMax" value="debug"/>
+			<param name="acceptOnMatch" value="true"/>
+		</filter>
+	</appender>
+	<appender name="info" class="com.flying.common.log.appender.FCTimeSizeRollingFileAppender">
+		<errorHandler class="com.flying.common.log.handler.JLogErrorHandler"></errorHandler>
+		<param name="File" value="/info/info.log"/>
+		<param name="MaxBackupIndex" value="50"/>
+		<param name="Encoding" value="GB2312"/>
+		<param name="MaxFileSize" value="10MB"/>
+		<param name="DatePattern" value="'.'yyyyMMddHH"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value=" [%d{yyyy-MM-dd HH:mm:ss}]%-5p%x - %m%n"/>
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="info"/>
+			<param name="LevelMax" value="info"/>
+			<param name="acceptOnMatch" value="true"/>
+		</filter>
+	</appender>
+	<appender name="warn" class="com.flying.common.log.appender.FCTimeSizeRollingFileAppender">
+		<errorHandler class="com.flying.common.log.handler.JLogErrorHandler"></errorHandler>
+		<param name="File" value="/warn/warn.log"/>
+		<param name="DatePattern" value="'.'yyyyMMddHH"/>
+		<param name="MaxBackupIndex" value="100"/>
+		<param name="Encoding" value="GB2312"/>
+		<param name="MaxFileSize" value="10MB"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value=" [%d{yyyy-MM-dd HH:mm:ss}]%-5p%x - %m%n"/>
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="warn"/>
+			<param name="LevelMax" value="warn"/>
+			<param name="acceptOnMatch" value="true"/>
+		</filter>
+	</appender>
+	<appender name="error" class="com.flying.common.log.appender.FCTimeSizeRollingFileAppender">
+		<errorHandler class="com.flying.common.log.handler.JLogErrorHandler"></errorHandler>
+		<param name="threshold" value="error"/>
+		<param name="File" value="/error/error.log"/>
+		<param name="DatePattern" value="'.'yyyyMMddHH"/>
+		<param name="MaxBackupIndex" value="50"/>
+		<param name="Encoding" value="GB2312"/>
+		<param name="MaxFileSize" value="10MB"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value=" [%d{yyyy-MM-dd HH:mm:ss}]%-5p%x - %m%n"/>
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="error"/>
+			<param name="LevelMax" value="error"/>
+			<param name="acceptOnMatch" value="true"/>
+		</filter>
+	</appender>
+	<appender name="console" class="org.apache.log4j.ConsoleAppender">
+		<param name="Encoding" value="GB2312"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="[%d{yyyy-MM-dd HH:mm:ss}]%-5p%x - %m%n"/>
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="debug"/>
+			<param name="LevelMax" value="error"/>
+			<param name="acceptOnMatch" value="true"/>
+		</filter>
+	</appender>
+	
+	<appender name="MethodLoggerAppender" class="com.flying.common.log.appender.FCTimeSizeRollingFileAppender">
+		<errorHandler class="com.flying.common.log.handler.JLogErrorHandler"></errorHandler>
+		<param name="File" value="/info/info.log"/>
+		<param name="MaxBackupIndex" value="50"/>
+		<param name="Encoding" value="GB2312"/>
+		<param name="MaxFileSize" value="10MB"/>
+		<param name="DatePattern" value="'.'yyyyMMddHH"/>
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value=" [%d{yyyy-MM-dd HH:mm:ss}]%-5p%x - %m%n"/>
+		</layout>
+		<filter class="org.apache.log4j.varia.LevelRangeFilter">
+			<param name="LevelMin" value="info"/>
+			<param name="LevelMax" value="info"/>
+			<param name="acceptOnMatch" value="true"/>
+		</filter>
+	</appender>
+	
+	<appender name="hessianAppender" class="com.flying.common.log.appender.FCTimeSizeRollingFileAppender">
+		<errorHandler class="com.flying.common.log.handler.JLogErrorHandler"></errorHandler>
+		<param name="File" value="/hessian/hessian.log" />
+		<param name="DatePattern" value="'.'yyyyMMddHH" />
+		<param name="Encoding" value="GB2312" />
+		<param name="MaxBackupIndex" value="50" />
+		<param name="MaxFileSize" value="100MB" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value=" [%d{yyyy-MM-dd HH:mm:ss}]%-5p%x - %m%n"/>
+		</layout>
+	</appender>
+	
+	<appender name="invokerSimpleAppender" class="com.flying.common.log.appender.FCTimeSizeRollingFileAppender">
+		<errorHandler class="com.flying.common.log.handler.JLogErrorHandler"></errorHandler>
+		<param name="File" value="/invoker/simple.log" />
+		<param name="DatePattern" value="'.'yyyyMMddHH" />
+		<param name="Encoding" value="GB2312" />
+		<param name="MaxBackupIndex" value="50" />
+		<param name="MaxFileSize" value="100MB" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value=" [%d{yyyy-MM-dd HH:mm:ss}]%-5p%x - %m%n"/>
+		</layout>
+	</appender>
+	
+	<appender name="invokeDetailAppender" class="com.flying.common.log.appender.FCTimeSizeRollingFileAppender">
+		<errorHandler class="com.flying.common.log.handler.JLogErrorHandler"></errorHandler>
+		<param name="File" value="/invoker/detail.log" />
+		<param name="DatePattern" value="'.'yyyyMMddHH" />
+		<param name="Encoding" value="GB2312" />
+		<param name="MaxBackupIndex" value="50" />
+		<param name="MaxFileSize" value="100MB" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value=" [%d{yyyy-MM-dd HH:mm:ss}]%-5p%x - %m%n"/>
+		</layout>
+	</appender>
+	
+	<appender name="accessAppender" class="com.flying.common.log.appender.FCTimeSizeRollingFileAppender">
+		<errorHandler class="com.flying.common.log.handler.JLogErrorHandler"></errorHandler>
+		<param name="File" value="/access/access.log" />
+		<param name="DatePattern" value="'.'yyyyMMddHH" />
+		<param name="Encoding" value="GB2312" />
+		<param name="MaxBackupIndex" value="50" />
+		<param name="MaxFileSize" value="100MB" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value=" [%d{yyyy-MM-dd HH:mm:ss}]%-5p%x - %m%n"/>
+		</layout>
+	</appender>
+	
+	<logger name="hessian" additivity="false">
+		<level value="info"/>
+		<appender-ref ref="hessianAppender"/>
+	</logger>
+	
+	<logger name="access" additivity="false">
+		<level value="info"/>
+		<appender-ref ref="accessAppender"/>
+	</logger>
+	
+	<logger name="MethodLogger" additivity="false">
+		<level value="info"/>
+		<appender-ref ref="MethodLoggerAppender"/>
+	</logger>
+	
+	<logger name="invokerSimple" additivity="false">
+		<level value="info"/>
+		<appender-ref ref="invokerSimpleAppender"/>
+		<appender-ref ref="console"/>
+	</logger>
+	
+	<logger name="invokerDetail" additivity="false">
+		<level value="info"/>
+		<appender-ref ref="invokeDetailAppender"/>
+	</logger>
+	
+	<root>
+		<level value="info"/>
+		<appender-ref ref="console"/>
+	</root>
+	
+</log4j:configuration>

@@ -1,0 +1,278 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- edited with XMLSpy v2011 (http://www.altova.com) by wanghaifeng (aspire) -->
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:simpleType name="ST_bean">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="ST_request_service">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="ST_import">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="ST_event">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="ST_config">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="ST_error">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:simpleType name="ST_mapping">
+		<xs:restriction base="xs:string"/>
+	</xs:simpleType>
+	<xs:element name="bean">
+		<xs:annotation>
+			<xs:documentation>属性name作为bean的id，通过Module.getBean(id)方法获取Bean；节点text作为Bean的class类名</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="ST_bean">
+					<xs:attribute name="name" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string"/>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="import">
+		<xs:annotation>
+			<xs:documentation>属性name作为bean的id，通过Module.getBean(id)方法获取Bean；节点text作为Bean的class类名</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="ST_import">
+					<xs:attribute name="type" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="module"/>
+								<xs:enumeration value="service"/>
+								<xs:enumeration value="widget"/>
+								<xs:enumeration value="page"/>
+								<xs:enumeration value="security"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="path" use="required" />
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="request">
+		<xs:annotation>
+			<xs:documentation>属性name作为bean的id，通过Module.getBean(id)方法获取Bean；节点text作为Bean的class类名</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="ST_request_service">
+					<xs:attribute name="type" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string"/>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="mapping">
+		<xs:annotation>
+			<xs:documentation>属性name作为bean的id，通过Module.getBean(id)方法获取Bean；节点text作为Bean的class类名</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="ST_mapping">
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="config">
+		<xs:annotation>
+			<xs:documentation>属性name作为配置的key，节点text作为配置的值</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="ST_config">
+					<xs:attribute name="name" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string"/>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="event">
+		<xs:annotation>
+			<xs:documentation>属性name作为配置的key，节点text作为配置的值</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:simpleContent>
+				<xs:extension base="ST_event">
+					<xs:attribute name="name" use="required">
+						<xs:simpleType>
+							<xs:restriction base="xs:string"/>
+						</xs:simpleType>
+					</xs:attribute>
+					<xs:attribute name="service" use="required" />
+					<xs:attribute name="type">
+						<xs:simpleType>
+							<xs:restriction base="xs:string">
+								<xs:enumeration value="load"/>
+								<xs:enumeration value="unload"/>
+							</xs:restriction>
+						</xs:simpleType>
+					</xs:attribute>
+				</xs:extension>
+			</xs:simpleContent>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="filter">
+		<xs:complexType>
+			<xs:attribute name="service" type="xs:string" use="required"></xs:attribute>
+			<xs:attribute name="mappings" type="xs:string" use="required"></xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="interceptor">
+		<xs:complexType>
+			<xs:attribute name="service" type="xs:string" use="required"></xs:attribute>
+			<xs:attribute name="mappings" type="xs:string" use="required"></xs:attribute>
+			<xs:attribute name="pointcut" default="before">
+				<xs:simpleType>
+					<xs:restriction base="xs:string">
+						<xs:enumeration value="before"/>
+						<xs:enumeration value="after"/>
+					</xs:restriction>
+				</xs:simpleType>
+			</xs:attribute>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="module">
+		<xs:annotation>
+			<xs:documentation>模块定义</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:all>
+				<xs:element name="id" type="xs:ID">
+					<xs:annotation>
+						<xs:documentation>模块ID</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="version" type="xs:string" nillable="false">
+					<xs:annotation>
+						<xs:documentation>模块版本号，当前模块的版本</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="inner-version" type="xs:string" nillable="false">
+					<xs:annotation>
+						<xs:documentation>模块版本号，当前模块的版本</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="name" type="xs:string" nillable="false">
+					<xs:annotation>
+						<xs:documentation>模块名称，一个有意义的迷城</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="desc" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>模块说明</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="static-path" type="xs:string" default="statics">
+					<xs:annotation>
+						<xs:documentation>静态页面访问路径，默认statis，这意味着tpl文件放在该目录下后可以直接访问，形如：http://ip:port/xx.shtml</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="template-type" default="smarty">
+					<xs:annotation>
+						<xs:documentation>模板类型，当前都是smarty</xs:documentation>
+					</xs:annotation>
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="smarty"/>
+							<xs:enumeration value="freemark"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="securities" type="xs:string" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>安全设置，对应securities.xml中的安全定义id，如果存在多个id，使用英文逗号分开</xs:documentation>
+					</xs:annotation>
+				</xs:element>
+				<xs:element name="interceptors" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>模块过滤器，过滤所有的模块请求</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="interceptor" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="filters" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>模块过滤器，过滤所有的模块请求</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="filter" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="imports" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>定义模块级别的bean，这些bean在模块加载过程中初始化，并且支持Init声明式语法</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="import" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="requests" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>定义模块级别的bean，这些bean在模块加载过程中初始化，并且支持Init声明式语法</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="request" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="beans" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>定义模块级别的bean，这些bean在模块加载过程中初始化，并且支持Init声明式语法</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="bean" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="configs" minOccurs="0" maxOccurs="1">
+					<xs:annotation>
+						<xs:documentation>定义其他配置内容</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element ref="config" minOccurs="0" maxOccurs="unbounded"/>
+						</xs:sequence>
+						<xs:attribute name="group" type="xs:string" use="optional"></xs:attribute>
+					</xs:complexType>
+				</xs:element>
+				<xs:element name="events" minOccurs="0">
+					<xs:annotation>
+						<xs:documentation>定义模块事件</xs:documentation>
+					</xs:annotation>
+					<xs:complexType>
+						<xs:sequence minOccurs="0" maxOccurs="unbounded">
+							<xs:element ref="event"/>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:all>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

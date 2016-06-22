@@ -11,6 +11,7 @@ import java.lang.annotation.Target;
 public @interface Param {
 	String value();
 	String desc() default "";
+	
 	//validation
 	String max() default "";
 	String min() default "";
@@ -20,4 +21,8 @@ public @interface Param {
 	String lt() default "";
 	String gt() default "";
 	String eq() default "";
+	String validator() default "";
+	//
+	String tag() default "";
+	
 }

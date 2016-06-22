@@ -11,7 +11,7 @@ import java.lang.annotation.Target;
 @Retention(RetentionPolicy.RUNTIME)
 @Handler(handler="com.flying.framework.service.impl.DaoUpdateHandler")
 public @interface DaoUpdate {
-	Position position() default Position.none_body;
+	Position position() default Position.after_body;
 	String sql() default "";
 	String entity() default "";
 	enum Position{
